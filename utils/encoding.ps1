@@ -1,4 +1,4 @@
-function Decodde-Base64($string)
+function Decode-Base64($string)
 {   
     [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($string))
 }
